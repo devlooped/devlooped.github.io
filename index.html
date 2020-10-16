@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Devlooped :||: Free Your Mind</title>
+	<title>:||: Dev↻d :||:</title>
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="Development, .NET, C#">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -108,15 +108,15 @@
 		@keyframes neonGlow {
 			0% {
 				text-shadow: 
-					0 0 10px rgba(255, 255, 255, .8),
-					0 0 20px rgba(255, 255, 255, .8),
-					0 0 22px rgba(255, 255, 255, .8),
-					0 0 40px rgba(66, 220, 66, .8),
-					0 0 60px rgba(66, 220, 66, 0.8),
-					0 0 80px rgba(66, 220, 66, .5),
-					0 0 100px rgba(66, 220, 66, .5),
-					0 0 140px rgba(66, 220, 66, .5),
-					0 0 200px rgba(66, 220, 66, .5);
+					0 0 10px rgba(255, 255, 255, .3),
+					0 0 20px rgba(255, 255, 255, .3),
+					0 0 22px rgba(255, 255, 255, .3),
+					0 0 40px rgba(66, 220, 66, .3),
+					0 0 60px rgba(66, 220, 66, 0.3),
+					0 0 80px rgba(66, 220, 66, .1),
+					0 0 100px rgba(66, 220, 66, .1),
+					0 0 140px rgba(66, 220, 66, .1),
+					0 0 200px rgba(66, 220, 66, .1);
 			}
 
 			100% {
@@ -136,6 +136,16 @@
 			font-style: italic;
 			font-size: 1.25rem;
 			background: black;
+			text-shadow:
+				0 0 10px rgba(255, 255, 255, .8),
+				0 0 20px rgba(255, 255, 255, .8),
+				0 0 22px rgba(255, 255, 255, .8),
+				0 0 40px rgba(150, 236, 150, .8),
+				0 0 60px rgba(150, 236, 150, 0.8),
+				0 0 80px rgba(150, 236, 150, .5),
+				0 0 100px rgba(150, 236, 150, .5),
+				0 0 140px rgba(150, 236, 150, .5),
+				0 0 200px rgba(150, 236, 150, 0.5);
 		}
 
 		.tagline {
@@ -177,14 +187,10 @@
 	<canvas id="matrix"></canvas>
 
 	<div id="wrapper">
-		<div id="title">
+		<div id="title" data-top="2.5">
 			<h1 class="glow">Dev<span class="loop">↻</span>d</h1>
-			<!-- See http://quickinfo.io/?%D5%9A -->
-			<p>
+			<div id="phonetic" data-top="0">
 				<span class="phonetic">\dev-lüpt\</span>
-			</p>
-			<div class="tagline">
-				<p>Free Your Mind.</p>
 			</div>
 		</div>
 	</div>
@@ -554,19 +560,7 @@
 				window.requestAnimationFrame(_m.draw);
 			}
 
-			/* Main */
-
-			//setup resize callback
-			window.addEventListener('resize', function () {
-				_m.resize();
-			});
-
-			document.addEventListener('click', function () {
-				_m.ticker.toggle();
-			});
-
-			document.addEventListener('dblclick', function () {
-				// toggle fullscreen
+			_m.toggleFullScreen = function() {
 				var elem = document.documentElement;
 				if (!document.fullscreenElement && !document.mozFullScreenElement &&
 					!document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -590,10 +584,47 @@
 						document.webkitExitFullscreen();
 					}
 				}
+			};
+
+			//setup resize callback
+			window.addEventListener('resize', function () {
+				_m.resize();
 			});
 
+			document.addEventListener('click', function () {
+				_m.ticker.toggle();
+			});
+
+			document.addEventListener('dblclick', function () {
+				_m.toggleFullScreen();
+			});
+
+			// moving the logo up/down with keys
+			window.addEventListener('keydown', function (e) {
+				var key = e.keyCode || e.which || e.key;
+				var title = e.shiftKey ? document.getElementById('phonetic') : document.getElementById('title');
+				var top = parseInt(title.getAttribute("data-top"));
+				if (key == 38) {
+					top -= 1;
+					title.style.paddingTop = top + 'em';
+					title.setAttribute('data-top', top);
+				} else if (key == 40) {
+					top += 1;
+					title.style.paddingTop = top + 'em';
+					title.setAttribute('data-top', top);
+				} else if (key == 32) {
+					_m.ticker.toggle();
+				} else if (key == 13) {
+					_m.toggleFullScreen();
+				}
+			});    
+			
 			//start animation
 			_m.init();
+
+			//don't animate from start when working locally
+			if (document.location.protocol == 'file:')
+				_m.ticker.toggle();
 		}
 
 		new Matrix('matrix');
