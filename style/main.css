@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Matrix Code NFI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Matrix Code NFI'), url('../font/matrix_code_nfi.woff') format('woff');
+}
+
+*,
+:before,
+:after {
+    box-sizing: inherit
+}
+
+html,
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: black;
+    color: #4dff4d;
+    font-family: Consolas, monospace, Monaco, "Courier New", Courier;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    text-align: center;
+    position: relative;
+    -webkit-text-size-adjust: 100%
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+section {
+    margin: 3em 0;
+}
+
+ul,
+ol {
+    padding-left: 1em;
+}
+
+h1, text {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+}
+
+@media screen and (min-width: 512px) {
+    h1, text {
+        font-size: 6rem;
+    }
+}
+
+#matrix {
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#title {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;    
+    position: absolute;
+    padding-top: 2.5em;
+    z-index: 3199;
+    color: white;
+}
+
+.glow {
+    animation: neonGlow 3s infinite alternate cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, .3),
+            0 0 20px rgba(255, 255, 255, .3),
+            0 0 22px rgba(255, 255, 255, .3),
+            0 0 40px rgba(66, 220, 66, .3),
+            0 0 60px rgba(66, 220, 66, 0.3),
+            0 0 80px rgba(66, 220, 66, .1),
+            0 0 100px rgba(66, 220, 66, .1),
+            0 0 140px rgba(66, 220, 66, .1),
+            0 0 200px rgba(66, 220, 66, .1);
+    }
+
+    100% {
+        text-shadow: 
+            0 0 2px rgba(255, 255, 255, .8),
+            0 0 8px rgba(255, 255, 255, .8),
+            0 0 10px rgba(255, 255, 255, .8),
+            0 0 20px rgba(66, 220, 66, .8),
+            0 0 30px rgba(66, 220, 66, .8),
+            0 0 40px rgba(66, 220, 66, .8),
+            0 0 50px rgba(66, 220, 66, .5),
+            0 0 80px rgba(66, 220, 66, .5);
+    }
+}
+
+.phonetic {
+    font-style: italic;
+    font-size: 1.25rem;
+    background: black;
+}
+
+.tagline {
+    font-size: 1.75rem;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, .8),
+        0 0 20px rgba(255, 255, 255, .8),
+        0 0 22px rgba(255, 255, 255, .8),
+        0 0 40px rgba(150, 236, 150, .8),
+        0 0 60px rgba(150, 236, 150, 0.8),
+        0 0 80px rgba(150, 236, 150, .5),
+        0 0 100px rgba(150, 236, 150, .5),
+        0 0 140px rgba(150, 236, 150, .5),
+        0 0 200px rgba(150, 236, 150, 0.5);
+}
+
+@media screen and (min-width: 512px) {
+    .loop {
+        font-size: 4.5rem;
+    }
+    .tagline {
+        font-size: 2.25rem;
+    }
+}
+
+.return,
+.footer {
+    margin-top: 3em;
+    text-align: center;
+}
