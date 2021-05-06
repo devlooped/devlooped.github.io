@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg height='100px' width='100px' xmlns='http://www.w3.org/2000/svg' version='1.0' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 100 100'>
+  <rect width='100%' height='100%' fill='black' />
+<text x='75%' y='15%' fill='rgb(77,255,77,0.3)' font-size='29' font-family='Matrix Code NFI'>1</text>
+<text x='75%' y='30%' fill='rgb(77,255,77,0.1)' font-size='24' font-family='Matrix Code NFI'>Q</text>
+<text x='75%' y='45%' fill='rgb(77,255,77,0.7)' font-size='22' font-family='Matrix Code NFI'>G</text>
+<text x='60%' y='15%' fill='rgb(77,255,77,0.3)' font-size='26' font-family='Matrix Code NFI'>[</text>
+<text x='60%' y='30%' fill='rgb(255,255,255,0.4)' font-size='28' font-family='Matrix Code NFI'>&#x2B;</text>
+<text x='60%' y='45%' fill='rgb(66,220,66,0.2)' font-size='33' font-family='Matrix Code NFI'>G</text>
+<text x='60%' y='60%' fill='rgb(77,255,77,0.1)' font-size='20' font-family='Matrix Code NFI'>2</text>
+<text x='60%' y='75%' fill='rgb(66,220,66,0.4)' font-size='24' font-family='Matrix Code NFI'>U</text>
+<text x='60%' y='90%' fill='rgb(255,255,255,0.5)' font-size='32' font-family='Matrix Code NFI'>W</text>
+<text x='0%' y='15%' fill='rgb(77,255,77,0.1)' font-size='35' font-family='Matrix Code NFI'>h</text>
+<text x='0%' y='30%' fill='rgb(77,255,77,0.4)' font-size='25' font-family='Matrix Code NFI'>x</text>
+<text x='0%' y='45%' fill='rgb(66,220,66,0.6)' font-size='25' font-family='Matrix Code NFI'>o</text>
+<text x='0%' y='60%' fill='rgb(255,255,255,0.6)' font-size='32' font-family='Matrix Code NFI'>O</text>
+<text x='0%' y='75%' fill='rgb(77,255,77,0.6)' font-size='15' font-family='Matrix Code NFI'>&amp;</text>
+  <text x='50%' y='80%' fill='white' text-anchor='middle' filter='url(#neon)' font-weight='bold' font-family='Consolas' font-size='90'>↻</text>
+  <defs>
+    <style type='text/css'>
+      @font-face {
+        font-family: Matrix Code NFI;
+        src: url('../font/matrix_code_nfi.woff');
+      }
+    </style>
+  </defs>
+  <filter id='neon'>
+    <feFlood flood-color='#4dff4d' flood-opacity='0.5' in='SourceGraphic' />
+    <feComposite operator='in' in2='SourceGraphic' />
+    <feGaussianBlur stdDeviation='10' />
+    <feComponentTransfer result='glow1'>
+      <feFuncA type='linear' slope='4' intercept='0' />
+    </feComponentTransfer>
+    <feMerge>
+       <feMergeNode in='glow1' />
+       <feMergeNode in='SourceGraphic' />
+    </feMerge>
+  </filter>
+</svg>
