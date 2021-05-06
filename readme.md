@@ -1,4 +1,4 @@
-![Icon](img/nuget.png) Devlooped
+![Icon](img/tiny.png) Devlooped
 ============
 
 Main site for https://www.devlooped.com
