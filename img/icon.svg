@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg height='100px' width='100px' xmlns='http://www.w3.org/2000/svg' version='1.0' style='background-color: black'>
+  <text x='50%' y='80%' fill='white' text-anchor='middle' filter='url(#neon)' font-weight='bold' font-family='Consolas' font-size='90'>↻</text>
+  <defs>
+    <style type='text/css'>
+      @font-face {
+        font-family: Matrix Code NFI;
+        src: url('../font/matrix_code_nfi.woff');
+      }
+    </style>
+  </defs>
+  <filter id='neon'>
+    <feFlood flood-color='#4dff4d' flood-opacity='0.5' in='SourceGraphic' />
+    <feComposite operator='in' in2='SourceGraphic' />
+    <feGaussianBlur stdDeviation='10' />
+    <feComponentTransfer result='glow1'>
+      <feFuncA type='linear' slope='4' intercept='0' />
+    </feComponentTransfer>
+    <feMerge>
+       <feMergeNode in='glow1' />
+       <feMergeNode in='SourceGraphic' />
+    </feMerge>
+  </filter>
+</svg>
