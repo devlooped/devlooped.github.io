@@ -92,15 +92,16 @@ $links = "";
 foreach ($node in $organizations) {
   $links += "<a href='https://github.com/$($node.login)'>
   <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
-</a>\n";
+</a>`n";
 }
 
 foreach ($node in $organizations) {
   $links += "<a href='https://github.com/$($node.login)'>
   <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
-</a>\n";
+</a>`n";
 }
 
-"<!-- sponsors -->$($links)<!-- sponsors -->" | Out-File .\sponsors.md
-(Get-Content -Path .\readme.md) -replace '<!-- sponsors -->.*?<!-- sponsors -->',"<!-- sponsors -->$($links)<!-- sponsors -->" | 
+$links = "<!-- sponsors -->`n$($links)<!-- sponsors -->";
+$links | Out-File .\sponsors.md
+(Get-Content -Path .\readme.md) -replace '<!-- sponsors -->.*?<!-- sponsors -->',$links | 
 Out-File .\readme.md
