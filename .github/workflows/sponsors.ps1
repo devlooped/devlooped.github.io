@@ -98,7 +98,7 @@ foreach ($sponsor in $sponsors) {
 $links = "<!-- sponsors -->`n`n$($links)`n<!-- sponsors -->";
 $links | Out-File .\sponsors.md -Force -Encoding UTF8
 $readme = Get-Content .\readme.md;
-$regex = '<!-- sponsors -->[\s\S]*<!-- sponsors -->';
+$regex = '<!--\ssponsors\s-->[\s\S]*<!--\ssponsors\s-->'
 
 if ($readme -match $regex) {
   $readme -replace $regex, [regex]::escape($links) | Out-File .\readme.md -Force -Encoding UTF8
