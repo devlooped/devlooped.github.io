@@ -103,5 +103,6 @@ $regex = '<!--\ssponsors\s-->[\s\S]*<!--\ssponsors\s-->'
 if ($readme -match $regex) {
   $readme -replace $regex, [regex]::escape($links) | Out-File .\readme.md -Force -Encoding UTF8
 } else {
-  Write-Error "Could not find sponsors section in readme.md";
+  Write-Warning $readme -ForegroundColor Yellow
+  Write-Error "Could not find sponsors section in readme.md"
 }
