@@ -91,7 +91,7 @@ $links = "";
 
 foreach ($sponsor in $sponsors) {
   $links += "<a href='https://github.com/$($sponsor.sponsorEntity.login)'>
-  <img src='.github/avatars/$($sponsor.sponsorEntity.login).svg' alt='$($sponsor.sponsorEntity.name)' title='$($sponsor.sponsorEntity.name)'>
+  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/$($sponsor.sponsorEntity.login).svg' alt='$($sponsor.sponsorEntity.name)' title='$($sponsor.sponsorEntity.name)'>
 </a>`n";
 }
 
