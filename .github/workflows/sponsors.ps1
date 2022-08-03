@@ -95,7 +95,7 @@ foreach ($sponsor in $sponsors) {
 </a>`n";
 }
 
-$final = "<!-- sponsors -->`n$($links)<!-- sponsors -->";
-$final | Out-File .\sponsors.md
-(Get-Content -Path .\readme.md) -replace '<!-- sponsors -->.*<!-- sponsors -->',"$($final)" | 
+$links = "<!-- sponsors -->`n$($links)<!-- sponsors -->";
+$links | Out-File .\sponsors.md
+(Get-Content .\readme.md) -replace '<!-- sponsors -->[\s\S]*<!-- sponsors -->',$links | 
 Out-File .\readme.md
