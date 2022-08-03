@@ -37,5 +37,5 @@ jobs:
           labels: dependencies
           commit-message: "💛 Refresh sponsors"
           title: "💛 Refresh sponsors"
-          body: "💛 Refresh sponsors"
+          body: "Sponsors list updated"
           token: ${{ secrets.DEVLOOPED_TOKEN }}

@@ -46,7 +46,7 @@ foreach ($node in $organizations) {
   $base64 = [convert]::ToBase64String($img.Content);
   $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='37' height='37'>
 	<foreignObject width='100%' height='100%'>
-		<div xmlns='http://www.w3.org/1999/xhtml'>
+		<div xmlns='http://www.w3.org/1999/xhtml' style='padding-top: 2px; padding-left: 2px;'>
 			<style>
         img {
           border-style: none;
@@ -60,7 +60,7 @@ foreach ($node in $organizations) {
 </svg>";
 
   $svg | Set-Content -Path ".github/avatars/$($node.login).svg";
-  write-host "> $($node.login).svg" -ForegroundColor Green;
+  write-host "=> $($node.login).svg" -ForegroundColor Green;
 }
 
 foreach ($node in $users) {
@@ -69,12 +69,13 @@ foreach ($node in $users) {
   $base64 = [convert]::ToBase64String($img.Content);
   $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='37' height='37'>
 	<foreignObject width='100%' height='100%'>
-		<div xmlns='http://www.w3.org/1999/xhtml'>
+		<div xmlns='http://www.w3.org/1999/xhtml' style='padding-top: 2px; padding-left: 2px;'>
 			<style>
         img {
           border-style: none;
           border-radius: 50% !important;
           box-shadow: 0 0 0 1px lightgrey;
+
         }            
 			</style>
       <img width='35' height='35' src='data:$($type);base64,$($base64)' />
@@ -83,5 +84,5 @@ foreach ($node in $users) {
 </svg>";
 
   $svg | Set-Content -Path ".github/avatars/$($node.login).svg";
-  write-host "> $($node.login).svg" -ForegroundColor DarkGray;
+  write-host "=> $($node.login).svg" -ForegroundColor DarkGray;
 }
