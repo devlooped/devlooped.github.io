@@ -89,15 +89,9 @@ foreach ($node in $users) {
 
 $links = "";
 
-foreach ($node in $organizations) {
-  $links += "<a href='https://github.com/$($node.login)'>
-  <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
-</a>`n";
-}
-
-foreach ($node in $organizations) {
-  $links += "<a href='https://github.com/$($node.login)'>
-  <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
+foreach ($sponsor in $sponsors) {
+  $links += "<a href='https://github.com/$($node.sponsorEntity.login)'>
+  <img src='.github/avatars/$($node.sponsorEntity.login).svg' alt='$($node.sponsorEntity.name)' title='$($node.sponsorEntity.name)'>
 </a>`n";
 }
 
