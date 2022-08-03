@@ -97,5 +97,5 @@ foreach ($sponsor in $sponsors) {
 
 $links = "<!-- sponsors -->`n`n$($links)`n<!-- sponsors -->";
 $links | Out-File .\sponsors.md
-(Get-Content .\readme.md) -replace '<!-- sponsors -->[\s\S]*<!-- sponsors -->',$links | 
+(Get-Content .\readme.md) -replace '<!-- sponsors -->[\s\S]*<!-- sponsors -->',[regex]::escape($links) | 
 Out-File .\readme.md
