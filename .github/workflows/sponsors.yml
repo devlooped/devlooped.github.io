@@ -12,12 +12,6 @@ jobs:
       - name: 🤘 checkout
         uses: actions/checkout@v2
 
-      # - name: 💛 sponsors
-      #   uses: JamesIves/github-sponsors-readme-action@v1
-      #   with:
-      #     token: ${{ secrets.DEVLOOPED_TOKEN }}
-      #     file: 'readme.md'
-
       - name: 🔽 gh 
         run: |
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
