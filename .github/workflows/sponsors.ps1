@@ -38,7 +38,7 @@ $sponsors =
 $organizations = $sponsors | where { $_.sponsorEntity.teamsUrl -ne $null } | select -ExpandProperty sponsorEntity;
 $users = $sponsors | where { $_.sponsorEntity.teamsUrl -eq $null } | select -ExpandProperty sponsorEntity;
 
-New-Item -Path ".github/avatars" -ErrorAction Ignore
+mkdir ".github/avatars" -ErrorAction Ignore
 
 foreach ($node in $organizations) {
   $img = iwr ($node.avatarUrl + "&s=70");
