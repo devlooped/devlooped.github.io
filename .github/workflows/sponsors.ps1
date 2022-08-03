@@ -60,6 +60,7 @@ foreach ($node in $organizations) {
 </svg>";
 
   $svg | Set-Content -Path ".github/avatars/$($node.login).svg";
+  write-host "> $($node.login).svg" -ForegroundColor Green;
 }
 
 foreach ($node in $users) {
@@ -82,4 +83,5 @@ foreach ($node in $users) {
 </svg>";
 
   $svg | Set-Content -Path ".github/avatars/$($node.login).svg";
+  write-host "> $($node.login).svg" -ForegroundColor DarkGray;
 }
