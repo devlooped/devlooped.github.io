@@ -32,4 +32,4 @@ jobs:
           commit-message: "💛 Refresh sponsors"
           title: "💛 Refresh sponsors"
           body: "Sponsors list updated"
-          token: ${{ secrets.DEVLOOPED_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
