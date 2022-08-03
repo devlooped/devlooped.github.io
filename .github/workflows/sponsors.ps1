@@ -86,3 +86,21 @@ foreach ($node in $users) {
   $svg | Set-Content -Path ".github/avatars/$($node.login).svg";
   write-host "=> $($node.login).svg" -ForegroundColor DarkGray;
 }
+
+$links = "";
+
+foreach ($node in $organizations) {
+  $links += "<a href='https://github.com/$($node.login)'>
+  <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
+</a>\n";
+}
+
+foreach ($node in $organizations) {
+  $links += "<a href='https://github.com/$($node.login)'>
+  <img src='.github/avatars/$($node.login).svg' alt='$($node.name)' title='$($node.name)'>
+</a>\n";
+}
+
+"<!-- sponsors -->$($links)<!-- sponsors -->" | Out-File .\sponsors.md
+(Get-Content -Path .\readme.md) -replace '<!-- sponsors -->.*?<!-- sponsors -->',"<!-- sponsors -->$($links)<!-- sponsors -->" | 
+Out-File .\readme.md
