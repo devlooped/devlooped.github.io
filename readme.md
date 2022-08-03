@@ -31,6 +31,6 @@ See also our NuGet on https://www.nuget.org/profiles/Devlooped.
 </a>
 
 <!-- sponsors -->
-
+<br><br>
 *[get mentioned here too](https://github.com/sponsors/devlooped)!*
 
