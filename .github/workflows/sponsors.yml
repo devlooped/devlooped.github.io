@@ -38,4 +38,4 @@ jobs:
           commit-message: "💛 Refresh sponsors"
           title: "💛 Refresh sponsors"
           body: "💛 Refresh sponsors"
-          token: ${{ env.GH_TOKEN }}
+          token: ${{ secrets.DEVLOOPED_TOKEN }}
