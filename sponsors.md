@@ -1,11 +1,3 @@
-![Icon](img/tiny.png) Devlooped
-============
-
-Main site for https://www.devlooped.com. 
-See also our NuGet on https://www.nuget.org/profiles/Devlooped.
-
-## 💛 Sponsors
-
 <!-- sponsors -->
 
 <a href='https://github.com/KirillOsenkov'>
@@ -31,5 +23,3 @@ See also our NuGet on https://www.nuget.org/profiles/Devlooped.
 </a>
 
 <!-- sponsors -->
-
-*[get mentioned here too](https://github.com/sponsors/devlooped)!*
