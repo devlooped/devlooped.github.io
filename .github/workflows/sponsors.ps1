@@ -44,7 +44,7 @@ foreach ($node in $organizations) {
   $img = iwr ($node.avatarUrl + "&s=70");
   $type = $img.Headers["Content-Type"];
   $base64 = [convert]::ToBase64String($img.Content);
-  $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='37' height='37'>
+  $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='38' height='38'>
 	<foreignObject width='100%' height='100%'>
 		<div xmlns='http://www.w3.org/1999/xhtml' style='padding-top: 2px; padding-left: 2px;'>
 			<style>
@@ -54,7 +54,7 @@ foreach ($node in $organizations) {
           box-shadow: 0 0 0 1px lightgrey;
         }
 			</style>
-      <img width='35' height='35' src='data:$($type);base64,$($base64)' />            
+      <img width='35' height='35' src='data:$($type);base64,$($base64)' />   
 		</div>
 	</foreignObject>
 </svg>";
@@ -67,7 +67,7 @@ foreach ($node in $users) {
   $img = iwr ($node.avatarUrl + "&s=70");
   $type = $img.Headers["Content-Type"];
   $base64 = [convert]::ToBase64String($img.Content);
-  $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='37' height='37'>
+  $svg = "<svg xmlns='http://www.w3.org/2000/svg' fill='none' width='38' height='38'>
 	<foreignObject width='100%' height='100%'>
 		<div xmlns='http://www.w3.org/1999/xhtml' style='padding-top: 2px; padding-left: 2px;'>
 			<style>
