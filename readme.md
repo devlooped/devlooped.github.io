@@ -17,11 +17,14 @@ See also our NuGet on https://www.nuget.org/profiles/Devlooped.
 <a href='https://github.com/sandrock'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/sandrock.svg' alt='SandRock' title='SandRock'>
 </a>
-<a href='https://github.com/aws'>
-  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/aws.svg' alt='Amazon Web Services' title='Amazon Web Services'>
+<a href='https://github.com/agocke'>
+  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/agocke.svg' alt='Andy Gocke' title='Andy Gocke'>
 </a>
 <a href='https://github.com/MelbourneDeveloper'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/MelbourneDeveloper.svg' alt='Christian Findlay' title='Christian Findlay'>
+</a>
+<a href='https://github.com/shahzadhuq'>
+  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/shahzadhuq.svg' alt='Shahzad Huq' title='Shahzad Huq'>
 </a>
 <a href='https://github.com/clarius'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/clarius.svg' alt='Clarius Org' title='Clarius Org'>
@@ -33,4 +36,5 @@ See also our NuGet on https://www.nuget.org/profiles/Devlooped.
 <!-- sponsors -->
 <br><br>
 *[get mentioned here too](https://github.com/sponsors/devlooped)!*
+
 
