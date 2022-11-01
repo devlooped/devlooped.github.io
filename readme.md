@@ -23,18 +23,19 @@ See also our NuGet on https://www.nuget.org/profiles/Devlooped.
 <a href='https://github.com/MelbourneDeveloper'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/MelbourneDeveloper.svg' alt='Christian Findlay' title='Christian Findlay'>
 </a>
-<a href='https://github.com/shahzadhuq'>
-  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/shahzadhuq.svg' alt='Shahzad Huq' title='Shahzad Huq'>
-</a>
 <a href='https://github.com/clarius'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/clarius.svg' alt='Clarius Org' title='Clarius Org'>
 </a>
 <a href='https://github.com/MFB-Technologies-Inc'>
   <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/MFB-Technologies-Inc.svg' alt='MFB Technologies, Inc.' title='MFB Technologies, Inc.'>
 </a>
+<a href='https://github.com/eeseewy'>
+  <img src='https://github.com/devlooped/devlooped.github.io/raw/main/.github/avatars/eeseewy.svg' alt='Eric C' title='Eric C'>
+</a>
 
 <!-- sponsors -->
 <br><br>
 *[get mentioned here too](https://github.com/sponsors/devlooped)!*
+
 
 
