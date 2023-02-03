@@ -676,13 +676,10 @@
 	</div>
 
 	<script>
-		// show thanks if querystring contains "thanks"
-		if (window.location.search.indexOf('thanks') >= 0) {
-			document.getElementById('thanks').style.display = 'block';
-		}
-		if (window.location.search.indexOf('admin') >= 0) {
-			document.getElementById('admin').style.display = 'block';
-		}
+		// show div with an id that matches URL fragment (if any)
+		var div = document.getElementById(window.location.hash.substr(1));
+		if (div)
+			div.style.display = 'block';
 	</script>
 </body>
 
