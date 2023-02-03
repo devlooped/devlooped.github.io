@@ -648,6 +648,42 @@
 
 		new Matrix('matrix');
 	</script>
+
+    <!-- A page-centered floating div with a thanks note 
+		 in a paragraph, 
+	     with light green-ish background and whilte 
+		 letters, with a small drop-shadow to make it 
+		 look like a box -->
+	<div id="thanks" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
+		<p style="color: #000; font-size: .75em; text-align: center;">
+			Thanks for installing <a href="https://github.com/devlooped/SponsorLink">SponsorLink</a>! 
+			<a href="https://github.com/devlooped/SponsorLink#-open-source-consumers">Learn how it works</a>, 
+			<a href="https://github.com/devlooped/SponsorLink/discussions">join the discussions</a> or 
+			<a href="https://github.com/devlooped/SponsorLink/issues">file an issue</a> 🙏.
+		</p>
+	</div>
+
+	<div id="admin" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
+		<p style="color: #000; font-size: .75em; text-align: center;">
+			Thanks for installing <a href="https://github.com/devlooped/SponsorLink">SponsorLink Admin</a>! 
+			Please follow the steps in the guide for 
+			<a href="https://github.com/devlooped/SponsorLink#-open-source-developers">open source developers</a> 
+			to configure your sponsor account and enable SponsorLink in your projects. 
+			Feel free to  
+			<a href="https://github.com/devlooped/SponsorLink/discussions">join the discussions</a> or 
+			<a href="https://github.com/devlooped/SponsorLink/issues">file an issue</a> 🙏.
+		</p>
+	</div>
+
+	<script>
+		// show thanks if querystring contains "thanks"
+		if (window.location.search.indexOf('thanks') >= 0) {
+			document.getElementById('thanks').style.display = 'block';
+		}
+		if (window.location.search.indexOf('admin') >= 0) {
+			document.getElementById('admin').style.display = 'block';
+		}
+	</script>
 </body>
 
 </html>
