@@ -654,7 +654,7 @@
 	     with light green-ish background and whilte 
 		 letters, with a small drop-shadow to make it 
 		 look like a box -->
-	<div id="thanks" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
+	<div id="sponsor" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
 		<p style="color: #000; font-size: .75em; text-align: center;">
 			Thanks for installing <a href="https://github.com/devlooped/SponsorLink">SponsorLink</a>! 
 			<a href="https://github.com/devlooped/SponsorLink#-open-source-consumers">Learn how it works</a>, 
@@ -663,7 +663,7 @@
 		</p>
 	</div>
 
-	<div id="admin" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
+	<div id="sponsorable" style="display: none; z-index: 10000; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e6ffe6; padding: 1em; border-radius: 0.2em;">
 		<p style="color: #000; font-size: .75em; text-align: center;">
 			Thanks for installing <a href="https://github.com/devlooped/SponsorLink">SponsorLink Admin</a>! 
 			Please follow the steps in the guide for 
@@ -676,8 +676,8 @@
 	</div>
 
 	<script>
-		// show div with an id that matches URL fragment (if any)
-		var div = document.getElementById(window.location.hash.substr(1));
+		// show div with an id that matches URL query string (if any)
+		var div = document.getElementById(window.location.search.substr(1));
 		if (div)
 			div.style.display = 'block';
 	</script>
